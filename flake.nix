@@ -89,12 +89,6 @@
             pkgs = mkPkgs buildSystem null;
             pkgsCross = mkPkgs buildSystem targetSystem;
 
-            buildPackageAttrs =
-              if builtins.hasAttr "makeBuildPackageAttrs" buildTargets.${targetSystem} then
-                buildTargets.${targetSystem}.makeBuildPackageAttrs pkgsCross
-              else
-                { };
-
           in
           pkgsCross.openssh.overrideAttrs (oldAttrs: {
             patches = (oldAttrs.patches or [ ]) ++ [ ./patches/openssh-enable-none-cipher.patch ];
