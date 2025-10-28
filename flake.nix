@@ -2,7 +2,7 @@
   description = "Nix flake to compile OpenSSH";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
 
   outputs =
@@ -95,7 +95,7 @@
           })
         )
         // {
-          # FIXME: Refactor cross above to that docker image packages are easier to add
+          # FIXME: Refactor cross above so that docker image packages are easier to add
         };
     };
 }
