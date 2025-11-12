@@ -67,7 +67,7 @@
             system = buildSystem;
           }
           // (
-            if targetSystem == null then
+            if buildSystem == targetSystem then
               { }
             else
               {
