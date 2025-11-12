@@ -1,0 +1,11 @@
+Port 2222
+
+HostKey host_keys/ssh_host_rsa_key
+HostKey host_keys/ssh_host_ecdsa_key
+HostKey host_keys/ssh_host_ed25519_key
+
+PermitRootLogin yes
+PubkeyAuthentication yes
+PasswordAuthentication no
+
+Ciphers none
